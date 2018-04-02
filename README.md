@@ -10,7 +10,7 @@ which are not available in the official library.
 Note: librespot only works with Spotify Premium
 
 ## This fork
-Contains changes to maintain the compatibility of librespot (and linked libraries) with the kernel version prior to 3.9 (see https://github.com/librespot-org/librespot/wiki/Compile-librespot-for-kernel-prior-3.9).
+Contains changes to maintain the compatibility of librespot (and linked libraries) with kernel versions prior to 3.9 (see https://github.com/librespot-org/librespot/wiki/Compile-librespot-for-kernel-prior-3.9).
 As the origin by [plietar](https://github.com/plietar/) is no longer actively maintained, this repo is forked from [librespot-org](https://github.com/librespot-org/librespot) where the project will be maintained and upgraded in the future.
 
 # Documentation
