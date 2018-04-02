@@ -10,7 +10,8 @@ which are not available in the official library.
 Note: librespot only works with Spotify Premium
 
 ## This fork
-As the origin by [plietar](https://github.com/plietar/) is no longer actively maintained, this organisation and repository have been set up so that the project may be maintained and upgraded in the future.
+Contains changes to maintain the compatibility of librespot (and linked libraries) with the kernel version prior to 3.9 (see https://github.com/librespot-org/librespot/wiki/Compile-librespot-for-kernel-prior-3.9).
+As the origin by [plietar](https://github.com/plietar/) is no longer actively maintained, this repo is forked from [librespot-org](https://github.com/librespot-org/librespot) where the project will be maintained and upgraded in the future.
 
 # Documentation
 Documentation is currently a work in progress. 
@@ -52,6 +53,20 @@ brew install portaudio
 Once you've cloned this repository you can build *librespot* using `cargo`.
 ```shell
 cargo build --release
+```
+
+# [Cross compilation](https://github.com/librespot-org/librespot/wiki/Cross-compiling)
+A cross compilation environment is provided as a docker image. 
+
+For all archs:
+```shell
+docker build -t librespot-cross -f contrib/Dockerfile .
+docker run -v /tmp/librespot-build:/build librespot-cross
+```
+Copy proper target binary to destination:
+```shell
+# Example for ARMv6 target devices (raspberry pi 1, zero, etc.)
+scp /tmp/librespot-build/arm-unknown-linux-gnueabihf/release/librespot USER@IP_OF_DEST:/opt/SpotifyConnect
 ```
 
 ## Usage
